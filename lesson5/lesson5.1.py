@@ -3,10 +3,16 @@ def translate(dictionary):
     try:
         print(f"Перевод введенного слова: {dictionary[a]}")
     except KeyError:
-        print("Такого слова в словаре нет! Хотите добавить? ")
-        option = input()
-        if option == "yes":
-            dictionary[a] = input(f"Перевод для слова {a} - ")
+        same_en, same_ru = eng_rus.keys(), rus_eng.keys()
+        if a in same_ru:
+            print(f"Это слово есть в другом словаре: {eng_rus[a]}")
+        else:
+            print("Такого слова в словаре нет! Хотите добавить? ")
+            option = input()
+            if option == "yes":
+                dictionary[a] = input(f"Перевод для слова {a} - ")
+            else:
+                pass
 
 
 eng_rus = {
