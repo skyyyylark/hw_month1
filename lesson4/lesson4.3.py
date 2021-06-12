@@ -14,5 +14,10 @@
 #     l.append(i)
 # print(l)
 
-name = "maga"
-print(name[0])
+# name = "maga"
+# print(name[0])
+
+
+l = [1, 2, 3, 5]
+l.insert(1, -1)
+print(l)
